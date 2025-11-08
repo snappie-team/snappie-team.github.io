@@ -62,6 +62,24 @@ This project is built with:
 
 ## How can I deploy this project?
 
+### GitHub Pages (Recommended)
+
+This project is configured to automatically deploy to GitHub Pages using GitHub Actions.
+
+**Setup Instructions:**
+
+1. Go to your repository settings on GitHub
+2. Navigate to **Settings** → **Pages**
+3. Under **Source**, select **GitHub Actions**
+4. Push your code to the `main` branch (or trigger the workflow manually)
+5. The workflow will automatically build and deploy your site
+
+Your site will be available at: `https://snappie-team.github.io`
+
+**Note:** The first deployment may take a few minutes. You can check the progress in the **Actions** tab of your repository.
+
+### Lovable Deployment
+
 Simply open [Lovable](https://lovable.dev/projects/58fcbe54-eaa1-4f69-9727-f3eae62cb9f8) and click on Share -> Publish.
 
 ## Can I connect a custom domain to my Lovable project?
