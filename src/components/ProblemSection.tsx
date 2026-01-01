@@ -1,5 +1,6 @@
 import { AlertCircle, TrendingDown, Users, Clock } from "lucide-react";
 import featureDiscover from "@/assets/feature-discover.jpg";
+import logo from "@/assets/dark-xxxhdpi.png";
 
 const problems = [
   {
@@ -36,16 +37,11 @@ const ProblemSection = () => {
                 alt="Cozy hidden gem restaurant with warm lighting and intimate atmosphere"
                 className="w-full h-auto rounded-3xl shadow-card"
               />
-              {/* Overlay badge */}
-              <div className="absolute -bottom-6 -right-6 bg-primary text-white px-6 py-4 rounded-2xl shadow-elevated">
-                <p className="text-2xl font-bold">10,000+</p>
-                <p className="text-sm opacity-90">Hidden Gems</p>
-              </div>
             </div>
           </div>
           
           <div className="order-1 lg:order-2 animate-fade-up">
-            <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <span className="inline-block bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Masalah yang Kami Pecahkan
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
@@ -72,9 +68,7 @@ const ProblemSection = () => {
             
             <div className="mt-8 p-4 bg-primary/10 rounded-xl border border-primary/20">
               <p className="text-lg text-foreground font-semibold flex items-center gap-3">
-                <span className="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold">S</span>
-                </span>
+                <img src={logo} alt="Snappie Logo" className="w-10 h-10 rounded-lg flex-shrink-0" />
                 <span><span className="text-primary">Snappie</span> hadir sebagai solusinya!</span>
               </p>
             </div>

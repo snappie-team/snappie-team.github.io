@@ -1,30 +1,42 @@
-import { MapPin, Trophy, Gift, TrendingUp, Sparkles } from "lucide-react";
+import { MapPin, Trophy, Gift, Camera, Star, Users, Sparkles } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const features = [
   {
     icon: MapPin,
-    title: "Temukan Gems Terkurasi",
-    description: "Kurasi khusus dan pencarian berbasis GPS memandu kamu ke tempat berkualitas tinggi yang jarang diketahui.",
-    color: "bg-blue-500",
+    title: "Smart Discovery",
+    description: "Temukan hidden gems kuliner di sekitarmu dengan algoritma pencarian cerdas yang memprioritaskan tempat berkualitas tapi belum terekspos.",
+    color: "bg-primary",
+  },
+  {
+    icon: Camera,
+    title: "Real-time Check-in & Validasi",
+    description: "Sistem check-in dengan GPS dan foto real-time yang memastikan keaslian kunjungan. Anti-fraud dan rewarding!",
+    color: "bg-secondary",
+  },
+  {
+    icon: Star,
+    title: "Quality Review System",
+    description: "Bagikan pengalaman kulinermu melalui review berkualitas dengan foto, rating detail, dan dapatkan poin bonus!",
+    color: "bg-primary",
   },
   {
     icon: Trophy,
-    title: "Kumpulkan Poin & Naik Level",
-    description: "Dapatkan poin setiap check-in tervalidasi (GPS & foto real-time) dan review berkualitas. Naik dari 'Explorer' ke 'Culinary Legend.'",
-    color: "bg-yellow-500",
+    title: "Level & Achievement System",
+    description: "Naik level dari Explorer hingga Culinary Legend. Kumpulkan badge, bersaing di leaderboard, dan unlock benefit eksklusif!",
+    color: "bg-secondary",
   },
   {
     icon: Gift,
-    title: "Tukar Reward Nyata",
-    description: "Bermitra dengan merchant lokal, tukar poinmu dengan voucher, diskon, minuman gratis, atau item eksklusif.",
-    color: "bg-green-500",
+    title: "Reward Marketplace",
+    description: "Tukarkan poin dengan reward nyata dari merchant partner. Voucher diskon, menu gratis, hingga merchandise eksklusif!",
+    color: "bg-primary",
   },
   {
-    icon: TrendingUp,
-    title: "Raih Puncak Leaderboard",
-    description: "Ikuti kompetisi sehat dengan explorer lain di kotamu dan panjat leaderboard bulanan.",
-    color: "bg-purple-500",
+    icon: Users,
+    title: "Community Features",
+    description: "Bergabung dengan komunitas food explorer. Follow, share, dan discover bersama ribuan pecinta kuliner lainnya!",
+    color: "bg-secondary",
   },
 ];
 
@@ -41,15 +53,15 @@ const FeaturesSection = () => {
             Fitur Unggulan
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Bukan Sekadar Direktori.
-            <span className="text-primary block mt-2">Ini Petualangan!</span>
+            Fitur Lengkap untuk
+            <span className="text-primary block mt-2">Petualangan Kulinermu</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Snappie mengubah cara kamu menemukan kuliner dengan gamifikasi yang seru dan reward nyata.
+            Snappie dilengkapi dengan berbagai fitur canggih untuk membuat eksplorasi kulinermu lebih seru dan rewarding.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (

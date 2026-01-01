@@ -1,28 +1,4 @@
-import { Smartphone, CheckCircle2, Gift, Camera } from "lucide-react";
-
-const steps = [
-  {
-    number: "01",
-    icon: Smartphone,
-    title: "Download & Daftar",
-    description: "Buat akun dalam hitungan detik. Gratis dan mudah.",
-    color: "from-blue-500 to-blue-600",
-  },
-  {
-    number: "02",
-    icon: Camera,
-    title: "Jelajahi & Validasi",
-    description: "Temukan hidden gem, kunjungi, dan check-in dengan foto real-time untuk validasi dan dapat poin.",
-    color: "from-primary to-orange-600",
-  },
-  {
-    number: "03",
-    icon: Gift,
-    title: "Klaim Reward",
-    description: "Kumpulkan poin dari check-in dan review, lalu tukar dengan reward nyata di merchant partner.",
-    color: "from-green-500 to-green-600",
-  },
-];
+import { Smartphone, MapPin, Camera, Star, Trophy, Gift, CheckCircle2 } from "lucide-react";
 
 const HowItWorksSection = () => {
   return (
@@ -45,44 +21,73 @@ const HowItWorksSection = () => {
           </h2>
         </div>
         
-        <div className="max-w-5xl mx-auto">
-          <div className="relative">
-            {/* Connection line for desktop */}
-            <div className="hidden lg:block absolute top-24 left-[15%] right-[15%] h-0.5 bg-gradient-to-r from-blue-500 via-primary to-green-500 opacity-30"></div>
-            
-            <div className="grid md:grid-cols-3 gap-8 lg:gap-12 relative">
-              {steps.map((step, index) => {
-                const Icon = step.icon;
-                return (
-                  <div 
-                    key={index} 
-                    className="relative animate-fade-up"
-                    style={{ animationDelay: `${index * 150}ms` }}
-                  >
-                    {/* Card */}
-                    <div className="bg-card rounded-3xl p-8 shadow-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-2 h-full">
-                      {/* Step number badge */}
-                      <div className="absolute -top-4 left-8">
-                        <span className={`bg-gradient-to-r ${step.color} text-white text-sm font-bold px-4 py-2 rounded-full shadow-lg`}>
-                          {step.number}
-                        </span>
-                      </div>
-                      
-                      {/* Icon */}
-                      <div className={`w-16 h-16 bg-gradient-to-r ${step.color} rounded-2xl flex items-center justify-center mb-6 shadow-lg mt-4`}>
-                        <Icon className="w-8 h-8 text-white" />
-                      </div>
-                      
-                      <h3 className="text-xl font-bold text-foreground mb-3">
-                        {step.title}
-                      </h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {step.description}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
+        <div className="max-w-5xl mx-auto space-y-16">
+          {/* Step 1 */}
+          <div className="flex flex-col lg:flex-row gap-8 items-center">
+            <div className="flex-1">
+              <div className="flex items-center gap-4 mb-4">
+                <span className="text-5xl font-bold text-primary">01</span>
+                <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+                  <Smartphone className="w-6 h-6 text-white" />
+                </div>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">Download & Daftar</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Download aplikasi Snappie dari Play Store dan buat akun dalam hitungan detik.
+              </p>
+            </div>
+            <div className="flex-1">
+              <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-12 flex items-center justify-center min-h-[250px]">
+                <div className="w-24 h-24 bg-primary rounded-2xl flex items-center justify-center shadow-lg">
+                  <Smartphone className="w-12 h-12 text-white" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Step 2 */}
+          <div className="flex flex-col lg:flex-row-reverse gap-8 items-center">
+            <div className="flex-1">
+              <div className="flex items-center gap-4 mb-4">
+                <span className="text-5xl font-bold text-secondary">02</span>
+                <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center">
+                  <Camera className="w-6 h-6 text-white" />
+                </div>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">Jelajahi & Check-in</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Temukan hidden gem, kunjungi, dan check-in dengan foto real-time untuk validasi dan dapat poin.
+              </p>
+            </div>
+            <div className="flex-1">
+              <div className="bg-gradient-to-br from-secondary/10 to-secondary/5 rounded-2xl p-12 flex items-center justify-center min-h-[250px]">
+                <div className="w-24 h-24 bg-secondary rounded-2xl flex items-center justify-center shadow-lg">
+                  <Camera className="w-12 h-12 text-white" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Step 3 */}
+          <div className="flex flex-col lg:flex-row gap-8 items-center">
+            <div className="flex-1">
+              <div className="flex items-center gap-4 mb-4">
+                <span className="text-5xl font-bold text-primary">03</span>
+                <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+                  <Gift className="w-6 h-6 text-white" />
+                </div>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">Klaim Reward</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Kumpulkan poin dari check-in dan review, lalu tukar dengan reward nyata di merchant partner.
+              </p>
+            </div>
+            <div className="flex-1">
+              <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-12 flex items-center justify-center min-h-[250px]">
+                <div className="w-24 h-24 bg-primary rounded-2xl flex items-center justify-center shadow-lg">
+                  <Gift className="w-12 h-12 text-white" />
+                </div>
+              </div>
             </div>
           </div>
         </div>

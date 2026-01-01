@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Download, X, Sparkles, Loader2 } from "lucide-react";
+import { Download, Sparkles, Loader2 } from "lucide-react";
 import { useAppUpdate } from "@/hooks/useAppUpdate";
+import logo from "@/assets/dark-xxxhdpi.png";
 
 interface DownloadModalProps {
   open: boolean;
@@ -24,9 +25,7 @@ const DownloadModal = ({ open, onOpenChange }: DownloadModalProps) => {
         <DialogHeader className="space-y-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary to-orange-600 rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-xl">S</span>
-              </div>
+              <img src={logo} alt="Snappie Logo" className="w-12 h-12 rounded-xl shadow-lg" />
               <div>
                 <DialogTitle className="text-xl">Snappie</DialogTitle>
                 {data && (
@@ -56,7 +55,7 @@ const DownloadModal = ({ open, onOpenChange }: DownloadModalProps) => {
             <div className="space-y-4">
               {/* Changelogs Header */}
               <div className="flex items-center gap-2">
-                <Sparkles className="w-5 h-5 text-primary" />
+                <Sparkles className="w-5 h-5 text-secondary" />
                 <h3 className="font-semibold text-foreground">Yang Baru</h3>
               </div>
               
@@ -83,7 +82,7 @@ const DownloadModal = ({ open, onOpenChange }: DownloadModalProps) => {
             Nanti
           </Button>
           <Button
-            className="flex-1 gap-2 bg-primary hover:bg-primary/90"
+            className="flex-1 gap-2 bg-secondary hover:bg-secondary/90"
             onClick={handleDownload}
             disabled={loading || !data}
           >

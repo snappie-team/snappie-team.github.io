@@ -8,7 +8,7 @@ const testimonials = [
     avatar: "A",
     text: "Akhirnya ada aplikasi yang menghargai passion saya mencari tempat makan unik! Sistem poinnya bikin ketagihan.",
     rating: 5,
-    color: "bg-blue-500",
+    color: "bg-primary",
   },
   {
     name: "Sarah Wijaya",
@@ -16,7 +16,7 @@ const testimonials = [
     avatar: "S",
     text: "Bulan ini sudah tukar poin untuk 3 kopi gratis. Wajib punya buat yang suka jajan!",
     rating: 5,
-    color: "bg-pink-500",
+    color: "bg-secondary",
   },
   {
     name: "Michael Tanaka",
@@ -24,7 +24,7 @@ const testimonials = [
     avatar: "M",
     text: "Suka banget sama aspek gamifikasinya. Cari restoran baru jadi serasa treasure hunt yang seru!",
     rating: 5,
-    color: "bg-green-500",
+    color: "bg-primary",
   },
 ];
 
@@ -63,7 +63,7 @@ const TestimonialsSection = () => {
                 {/* Rating */}
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    <Star key={i} className="w-5 h-5 fill-secondary text-secondary" />
                   ))}
                 </div>
                 
