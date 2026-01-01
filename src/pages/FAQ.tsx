@@ -1,0 +1,72 @@
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { HelpCircle } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { faqCategories } from "@/data/faqData";
+
+const FAQ = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="pt-32 pb-16 bg-gradient-to-br from-primary to-primary/80 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
+        <div className="container mx-auto px-4 relative">
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <HelpCircle className="w-4 h-4" />
+              FAQ
+            </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              Pertanyaan yang
+              <span className="text-secondary block mt-2">Sering Ditanyakan</span>
+            </h1>
+            <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
+              Temukan jawaban untuk pertanyaan umum seputar Snappie. Belum menemukan yang kamu cari? Hubungi tim support kami.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Content */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            {faqCategories.map((category, categoryIndex) => (
+              <div key={categoryIndex} className="mb-12">
+                <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-3">
+                  <span className={`w-10 h-10 ${categoryIndex % 2 === 0 ? 'bg-primary' : 'bg-secondary'} rounded-xl flex items-center justify-center text-white text-sm font-bold`}>
+                    {categoryIndex + 1}
+                  </span>
+                  {category.category}
+                </h2>
+                
+                <Accordion type="single" collapsible className="space-y-4">
+                  {category.questions.map((item, index) => (
+                    <AccordionItem 
+                      key={index} 
+                      value={`${categoryIndex}-${index}`}
+                      className="bg-card rounded-2xl shadow-card border-none px-6"
+                    >
+                      <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary py-6">
+                        {item.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                        {item.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default FAQ;
