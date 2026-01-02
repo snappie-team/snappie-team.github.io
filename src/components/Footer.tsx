@@ -26,6 +26,8 @@ const Footer = () => {
               <li><Link to="/fitur" className="text-white/70 hover:text-secondary transition-colors text-sm">Fitur</Link></li>
               <li><Link to="/list-kuliner" className="text-white/70 hover:text-secondary transition-colors text-sm">List Kuliner</Link></li>
               <li><Link to="/faq" className="text-white/70 hover:text-secondary transition-colors text-sm">FAQ</Link></li>
+              <li><Link to="/syarat-ketentuan" className="text-white/70 hover:text-secondary transition-colors text-sm">Syarat & Ketentuan</Link></li>
+              <li><Link to="/kebijakan-privasi" className="text-white/70 hover:text-secondary transition-colors text-sm">Kebijakan Privasi</Link></li>
             </ul>
           </div>
 

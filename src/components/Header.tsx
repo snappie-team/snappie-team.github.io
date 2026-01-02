@@ -28,8 +28,8 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // On non-home pages, always show scrolled style
-  const showScrolledStyle = isScrolled || !isHomePage;
+  // On non-home pages, always show scrolled style. Also show on mobile menu open
+  const showScrolledStyle = isScrolled || !isHomePage || isMobileMenuOpen;
 
   return (
     <>

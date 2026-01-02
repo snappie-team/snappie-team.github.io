@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Users, Target, Heart, Award, Sparkles, User, Instagram, Linkedin, Twitter, Github } from "lucide-react";
+import { Users, Target, Heart, Award, Sparkles, User, Instagram, Linkedin, Twitter, Github, FileText } from "lucide-react";
 import logo from "@/assets/dark-xxxhdpi.png";
 
 const TentangKami = () => {

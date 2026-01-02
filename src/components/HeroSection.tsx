@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { Download, Sparkles, MapPin, Star } from "lucide-react";
+import { Download, Sparkles, MapPin, Star, Smartphone } from "lucide-react";
 import heroMockup from "@/assets/hero-mockup.jpg";
 import { useState } from "react";
 import DownloadModal from "./DownloadModal";
+import { useAppUpdate } from "@/hooks/useAppUpdate";
 
 const HeroSection = () => {
   const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
+  const { data: appUpdateData } = useAppUpdate();
 
   return (
     <>
@@ -36,15 +38,22 @@ const HeroSection = () => {
                 Lebih dari sekadar direktori. Kumpulkan poin, naik level, dan dapatkan reward nyata hanya dengan menjelajahi tempat makan unik di kotamu.
               </p>
               
-              <div className="flex justify-center lg:justify-start">
+              <div className="flex flex-col items-center lg:items-start gap-2">
                 <Button 
                   size="lg" 
                   className="gap-3 bg-secondary text-white hover:bg-secondary/90 shadow-lg hover:shadow-xl transition-all hover:scale-105 h-14 px-8 text-base font-semibold rounded-xl"
                   onClick={() => setIsDownloadModalOpen(true)}
                 >
                   <Download className="w-5 h-5" />
-                  Download Aplikasi
+                  Download Aplikasi 
                 </Button>
+                {appUpdateData && (
+                  <div className="flex gap-2 text-white/70">
+                    <span className="text-sm italic">
+                      Android (v{appUpdateData.version_name})
+                    </span>
+                  </div>
+                )}
               </div>
             </div>
             

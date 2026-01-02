@@ -1,102 +1,52 @@
 export const faqCategories = [
   {
-    category: "Umum",
+    category: "Mengenai Snappie",
     questions: [
       {
         question: "Apa itu Snappie?",
-        answer: "Snappie adalah aplikasi mobile yang membantu kamu menemukan hidden gems kuliner di kotamu. Berbeda dengan aplikasi review biasa, Snappie fokus pada tempat-tempat kuliner tersembunyi berkualitas yang jarang diketahui publik, dilengkapi dengan sistem gamifikasi dan reward nyata."
+        answer: "Snappie adalah aplikasi yang berfokus pada pencarian dan rekomendasi tempat kuliner \"hidden gems\" di Pontianak yang dipilih secara kurasi dan berbasis gamifikasi."
       },
       {
-        question: "Apakah Snappie gratis?",
-        answer: "Ya, Snappie 100% gratis untuk diunduh dan digunakan. Tidak ada biaya langganan atau fitur berbayar. Semua fitur termasuk eksplorasi, check-in, review, dan penukaran reward tersedia tanpa biaya."
-      },
-      {
-        question: "Di kota mana saja Snappie tersedia?",
-        answer: "Saat ini Snappie tersedia di 20+ kota besar di Indonesia termasuk Jakarta, Bandung, Surabaya, Yogyakarta, Semarang, Malang, Bali, dan Medan. Kami terus menambah coverage ke kota-kota lain."
-      },
-      {
-        question: "Bagaimana cara mendaftar?",
-        answer: "Cukup download aplikasi Snappie dari Play Store, lalu daftar menggunakan email atau akun Google. Proses registrasi hanya membutuhkan waktu kurang dari 1 menit."
+        question: "Bagaimana cara Snappie bekerja?",
+        answer: "Kami menampilkan tempat kuliner yang telah dikurasi oleh tim Snappie. Tugas Anda adalah mencari, mengulas, dan membagikan pengalaman Anda untuk membantu orang lain."
       }
     ]
   },
   {
-    category: "Poin & Reward",
+    category: "Fitur dan Ulasan",
     questions: [
       {
-        question: "Bagaimana cara mendapatkan poin?",
-        answer: "Kamu bisa mendapatkan poin dengan berbagai cara: check-in tervalidasi (+50 poin), menulis review dengan foto (+30 poin), review text berkualitas (+20 poin), menemukan hidden gem baru (+100 poin), referral teman (+200 poin), dan streak harian 7 hari (+150 poin bonus)."
+        question: "Bagaimana cara mencari tempat makan?",
+        answer: "Gunakan fitur pencarian berdasarkan nama, lokasi, atau kata kunci. Anda juga bisa menggunakan filter untuk hasil yang lebih spesifik."
       },
       {
-        question: "Apa saja reward yang bisa ditukar?",
-        answer: "Reward di Snappie sangat beragam! Mulai dari voucher diskon di merchant partner, minuman atau makanan gratis, merchandise eksklusif Snappie, hingga item limited edition. Katalog reward diupdate secara berkala."
+        question: "Bolehkah saya mengulas tempat makan?",
+        answer: "Tentu! Cari nama tempat yang Anda kunjungi, pergi ke halaman ulasan, lalu klik tombol \"Beri Ulasan\" untuk memberikan rating, menulis ulasan, atau mengunggah foto dan video."
       },
       {
-        question: "Apakah poin bisa expired?",
-        answer: "Poin Snappie tidak memiliki masa kadaluarsa selama akunmu aktif. Namun, jika akunmu tidak aktif selama lebih dari 12 bulan, poin akan hangus. Pastikan untuk tetap aktif menjelajah!"
-      },
-      {
-        question: "Bagaimana sistem level bekerja?",
-        answer: "Ada 5 level di Snappie: Explorer (0-500 poin), Foodie (501-2000 poin), Gourmet (2001-5000 poin), Connoisseur (5001-10000 poin), dan Culinary Legend (10000+ poin). Setiap level membuka badge unik dan benefit eksklusif."
+        question: "Bagaimana cara membagikan informasi tempat kuliner ke media sosial?",
+        answer: "Pada halaman detail tempat, klik ikon \"Bagikan\" untuk memposting informasi tempat tersebut ke media sosial favorit Anda."
       }
     ]
   },
   {
-    category: "Check-in & Review",
+    category: "Papan Peringkat, Tantangan, Hadiah, dan Pencapaian",
     questions: [
       {
-        question: "Bagaimana cara check-in yang valid?",
-        answer: "Check-in dianggap valid jika: 1) Kamu berada di lokasi tempat (verifikasi GPS), 2) Mengupload foto real-time (bukan dari gallery), 3) Foto diambil di tempat tersebut. Sistem kami akan memverifikasi ketiga hal ini secara otomatis."
+        question: "Apa itu Papan Peringkat?",
+        answer: "Papan Peringkat menampilkan daftar para kontributor terbaik di Snappie. Peringkat Anda ditentukan oleh jumlah XP yang Anda kumpulkan. Semakin aktif Anda menyelesaikan misi, semakin tinggi posisi Anda di papan peringkat."
       },
       {
-        question: "Mengapa check-in saya ditolak?",
-        answer: "Check-in bisa ditolak karena: lokasi GPS tidak sesuai, foto yang diupload bukan foto real-time, foto tidak relevan dengan tempat, atau terdeteksi adanya manipulasi. Pastikan GPS aktif dan upload foto yang diambil langsung saat berkunjung."
+        question: "Apa itu Tantangan dan bagaimana cara mengikutinya?",
+        answer: "Tantangan adalah misi khusus yang kami berikan kepada komunitas. Contohnya, \"Ulas 3 tempat kopi dalam minggu ini.\" Anda bisa melihat tantangan yang tersedia di halaman profil Anda. Setelah menyelesaikannya, Anda akan mendapatkan hadiah ekstra!"
       },
       {
-        question: "Apa yang membuat review berkualitas?",
-        answer: "Review berkualitas mencakup: deskripsi pengalaman yang detail, informasi tentang menu yang dicoba, foto makanan dan suasana yang jelas, rating yang objektif, dan tips untuk pengunjung lain. Review seperti ini mendapat bonus poin ekstra."
+        question: "Bagaimana cara mendapatkan Hadiah Kupon?",
+        answer: "Anda bisa mendapatkan Hadiah Kupon dengan menukarkan Koin yang sudah Anda kumpulkan dari misi yang telah diselesaikan."
       },
       {
-        question: "Bisakah saya mengedit review?",
-        answer: "Ya, kamu bisa mengedit review dalam waktu 24 jam setelah dipublikasikan. Setelah itu, review menjadi permanen untuk menjaga integritas data. Poin yang sudah didapat tidak akan berkurang jika review diedit."
-      }
-    ]
-  },
-  {
-    category: "Partner & Bisnis",
-    questions: [
-      {
-        question: "Bagaimana cara mendaftarkan tempat kuliner saya?",
-        answer: "Jika kamu pemilik tempat kuliner, kamu bisa mengajukan pendaftaran melalui fitur 'Daftar Partner' di aplikasi atau hubungi tim kami di partner@snappie.id. Tim kurasi kami akan melakukan verifikasi sebelum tempat kamu ditampilkan."
-      },
-      {
-        question: "Apa keuntungan menjadi merchant partner?",
-        answer: "Merchant partner mendapat: exposure ke komunitas food explorer, badge 'Verified Partner', akses dashboard analytics, kemampuan membuat promo khusus, dan listing prioritas di hasil pencarian."
-      },
-      {
-        question: "Apakah ada biaya untuk merchant?",
-        answer: "Pendaftaran dasar sebagai merchant gratis. Untuk fitur premium seperti promoted listing dan analytics advance, tersedia paket berlangganan dengan harga terjangkau. Hubungi tim bisnis kami untuk detail lebih lanjut."
-      }
-    ]
-  },
-  {
-    category: "Teknis & Akun",
-    questions: [
-      {
-        question: "Lupa password, bagaimana cara reset?",
-        answer: "Klik 'Lupa Password' di halaman login, masukkan email terdaftar, dan kami akan mengirimkan link reset password. Link valid selama 24 jam. Jika tidak menerima email, cek folder spam atau hubungi support."
-      },
-      {
-        question: "Bagaimana cara menghapus akun?",
-        answer: "Untuk menghapus akun, buka Settings > Akun > Hapus Akun. Perlu diingat bahwa penghapusan akun bersifat permanen dan semua data termasuk poin akan hilang. Proses ini tidak dapat dibatalkan."
-      },
-      {
-        question: "Aplikasi error atau crash, apa yang harus dilakukan?",
-        answer: "Coba langkah berikut: 1) Pastikan aplikasi versi terbaru, 2) Clear cache aplikasi, 3) Restart device, 4) Reinstall aplikasi. Jika masih bermasalah, laporkan ke tim support dengan screenshot error."
-      },
-      {
-        question: "Apakah data saya aman?",
-        answer: "Keamanan data pengguna adalah prioritas kami. Kami menggunakan enkripsi end-to-end, tidak menjual data ke pihak ketiga, dan mematuhi regulasi perlindungan data. Baca Kebijakan Privasi kami untuk detail lengkap."
+        question: "Apa itu Pencapaian?",
+        answer: "Pencapaian adalah lencana atau badge permanen yang diberikan sebagai bentuk apresiasi atas kontribusi besar Anda di Snappie. Pencapaian ini tidak bisa ditukar, tetapi akan selalu terpajang di profil Anda sebagai bukti kontribusi dan pencapaian Anda dalam komunitas. Contohnya adalah lencana \"Ulasan ke-50\"."
       }
     ]
   }

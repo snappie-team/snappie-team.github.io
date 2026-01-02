@@ -9,6 +9,8 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
+import TermsConditions from "./pages/TermsConditions";
+import KebijakanPrivasi from "./pages/KebijakanPrivasi";
 import TentangKami from "./pages/TentangKami";
 import Fitur from "./pages/Fitur";
 import ListKuliner from "./pages/ListKuliner";
@@ -30,6 +32,8 @@ const App = () => (
           <Route path="/fitur" element={<Fitur />} />
           <Route path="/list-kuliner" element={<ListKuliner />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/syarat-ketentuan" element={<TermsConditions />} />
+          <Route path="/kebijakan-privasi" element={<KebijakanPrivasi />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
