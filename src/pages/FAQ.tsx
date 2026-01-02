@@ -67,49 +67,49 @@ const FAQ = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-primary/5 to-secondary/5 flex gap-8">
+      <section className="py-16 bg-gradient-to-br from-primary/5 to-secondary/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="bg-card rounded-2xl shadow-card p-8 md:p-12">
-              <FileText className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                Syarat dan Ketentuan
-              </h2>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                Pelajari lebih lanjut tentang syarat dan ketentuan penggunaan aplikasi Snappie untuk memahami hak dan kewajiban Anda sebagai pengguna.
-              </p>
-              <Link to="/syarat-ketentuan">
-                <Button 
-                  size="lg"
-                  className="gap-2 bg-primary hover:bg-primary/90 text-white"
-                >
-                  <FileText className="w-5 h-5" />
-                  Baca Syarat & Ketentuan
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
+          <div className="max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Syarat dan Ketentuan Card */}
+              <div className="bg-card rounded-2xl shadow-card p-8 md:p-10">
+                <FileText className="w-12 h-12 text-primary mx-auto mb-4" />
+                <h2 className="text-xl md:text-2xl font-bold text-foreground mb-3 text-center">
+                  Syarat dan Ketentuan
+                </h2>
+                <p className="text-sm text-muted-foreground mb-6 leading-relaxed text-center">
+                  Pelajari lebih lanjut tentang syarat dan ketentuan penggunaan aplikasi Snappie untuk memahami hak dan kewajiban Anda sebagai pengguna.
+                </p>
+                <Link to="/syarat-ketentuan" className="block">
+                  <Button 
+                    size="lg"
+                    className="gap-2 bg-primary hover:bg-primary/90 text-white w-full"
+                  >
+                    <FileText className="w-5 h-5" />
+                    Baca Syarat & Ketentuan
+                  </Button>
+                </Link>
+              </div>
 
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="bg-card rounded-2xl shadow-card p-8 md:p-12">
-              <FileText className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                Syarat dan Ketentuan
-              </h2>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                Pelajari lebih lanjut tentang syarat dan ketentuan penggunaan aplikasi Snappie untuk memahami hak dan kewajiban Anda sebagai pengguna.
-              </p>
-              <Link to="/syarat-ketentuan">
-                <Button 
-                  size="lg"
-                  className="gap-2 bg-primary hover:bg-primary/90 text-white"
-                >
-                  <FileText className="w-5 h-5" />
-                  Baca Syarat & Ketentuan
-                </Button>
-              </Link>
+              {/* Kebijakan Privasi Card */}
+              <div className="bg-card rounded-2xl shadow-card p-8 md:p-10">
+                <FileText className="w-12 h-12 text-secondary mx-auto mb-4" />
+                <h2 className="text-xl md:text-2xl font-bold text-foreground mb-3 text-center">
+                  Kebijakan Privasi
+                </h2>
+                <p className="text-sm text-muted-foreground mb-6 leading-relaxed text-center">
+                  Ketahui bagaimana Snappie mengumpulkan, menggunakan, dan melindungi informasi pribadi Anda dengan membaca kebijakan privasi kami.
+                </p>
+                <Link to="/kebijakan-privasi" className="block">
+                  <Button 
+                    size="lg"
+                    className="gap-2 bg-secondary hover:bg-secondary/90 text-white w-full"
+                  >
+                    <FileText className="w-5 h-5" />
+                    Baca Kebijakan Privasi
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

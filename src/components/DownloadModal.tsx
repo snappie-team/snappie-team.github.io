@@ -3,6 +3,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Download, Sparkles, Loader2 } from "lucide-react";
 import { useAppUpdate } from "@/hooks/useAppUpdate";
 import logo from "@/assets/dark-xxxhdpi.png";
+import { Link } from "react-router-dom";
 
 interface DownloadModalProps {
   open: boolean;
@@ -70,6 +71,29 @@ const DownloadModal = ({ open, onOpenChange }: DownloadModalProps) => {
               />
             </div>
           ) : null}
+        </div>
+
+        {/* Terms & Privacy Notice */}
+        <div className="px-1 pb-2">
+          <p className="text-xs text-center text-muted-foreground">
+            Dengan mengunduh aplikasi ini, Anda setuju dengan{" "}
+            <Link 
+              to="/syarat-ketentuan" 
+              className="text-primary hover:underline font-medium"
+              onClick={() => onOpenChange(false)}
+            >
+              Syarat & Ketentuan
+            </Link>
+            {" "}dan{" "}
+            <Link 
+              to="/kebijakan-privasi" 
+              className="text-primary hover:underline font-medium"
+              onClick={() => onOpenChange(false)}
+            >
+              Kebijakan Privasi
+            </Link>
+            {" "}kami.
+          </p>
         </div>
 
         {/* Action Buttons */}
