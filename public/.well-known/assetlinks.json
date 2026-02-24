@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.justtffy.snappie_app",
+      "sha256_cert_fingerprints": [
+        "5A:E9:E3:11:AE:25:AE:53:96:32:E7:81:D3:9F:C5:52:B1:36:FE:7A:AB:F3:AD:61:D0:73:BB:DA:49:BE:6C:76"
+      ]
+    }
+  }
+]
