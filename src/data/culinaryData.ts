@@ -2,11 +2,11 @@ export interface CulinaryPlace {
   id: number;
   name: string;
   category: string;
-  city: string;
+  address: string;
   rating: number;
   reviews: number;
   priceRange: string;
-  image: string;
+  imageUrl: string;
   description: string;
   tags: string[];
   openHours: string;
@@ -16,185 +16,78 @@ export const categories = [
   { id: "all", name: "Semua" },
   { id: "restaurant", name: "Restoran" },
   { id: "cafe", name: "Kafe" },
-  { id: "dessert", name: "Dessert" },
+  { id: "bakery", name: "Bakery" },
+  { id: "bistro", name: "Bistro" },
   { id: "street-food", name: "Street Food" },
 ];
 
-export const cities = [
-  "Semua Kota",
-  "Jakarta",
-  "Bandung",
-  "Surabaya",
-  "Yogyakarta",
-  "Semarang",
-  "Malang",
-  "Bali",
-  "Medan",
-];
-
+const culinaryImageBaseUrl = "https://res.cloudinary.com/deqnkuhbv/image/upload/v1775542514";
+// https://res.cloudinary.com/deqnkuhbv/image/upload/v1773585738/places/01KKRZ57AZ581DSPG8GDZSP1J8.jpg
 // TODO: This will be replaced with API fetch
 export const culinaryPlaces: CulinaryPlace[] = [
   {
     id: 1,
-    name: "Warung Mak Nyak",
-    category: "street-food",
-    city: "Jakarta",
+    name: "Sagarmatha Coffee Bar",
+    category: "cafe",
+    address: "Jl. H. Rais A. Rachman Gg. Selamat 3 No.36b, Sungai Jawi Dalam, Pontianak Barat",
     rating: 4.8,
-    reviews: 324,
+    reviews: 357,
     priceRange: "$$",
-    image: "🍜",
-    description: "Nasi goreng legendaris dengan bumbu rahasia turun-temurun. Buka sejak 1985.",
-    tags: ["Nasi Goreng", "Indonesian", "Hidden Gem"],
-    openHours: "17:00 - 23:00"
+    imageUrl: `${culinaryImageBaseUrl}/places/01KKRZ57AZ581DSPG8GDZSP1J8.jpg`,
+    description: "Hidden gem di Pontianak Barat dengan konsep slow bar industrial dan racikan kopi berbahan natural.",
+    tags: ["Slow Bar", "Industrial", "Hidden Gem"],
+    openHours: "08:00 - 22:00"
   },
   {
     id: 2,
-    name: "Kedai Kopi Tua",
+    name: "2818 Coffee Roasters",
     category: "cafe",
-    city: "Bandung",
+    address: "Gg. Purnama Agung 3, Parit Tokaya, Pontianak Selatan",
     rating: 4.7,
-    reviews: 256,
-    priceRange: "$",
-    image: "☕",
-    description: "Kopi tubruk khas Bandung dengan suasana retro. Spot favorit para seniman lokal.",
-    tags: ["Coffee", "Vintage", "Cozy"],
+    reviews: 289,
+    priceRange: "$$",
+    imageUrl: `${culinaryImageBaseUrl}/places/01KKWGPTRCB99Q74KE6JHKE4ZY.jpg`,
+    description: "Micro-roastery di kawasan perumahan yang tenang, cocok untuk kerja fokus dengan kopi hasil sangrai sendiri.",
+    tags: ["Micro Roastery", "Work From Cafe", "Specialty Coffee"],
     openHours: "08:00 - 22:00"
   },
   {
     id: 3,
-    name: "Bakso Pak Kumis",
-    category: "street-food",
-    city: "Surabaya",
-    rating: 4.9,
-    reviews: 512,
-    priceRange: "$",
-    image: "🍲",
-    description: "Bakso urat super jumbo dengan kuah kaldu sapi yang gurih. Antri 30 menit worth it!",
-    tags: ["Bakso", "Street Food", "Must Try"],
-    openHours: "10:00 - 21:00"
-  },
-  {
-    id: 4,
-    name: "Gudeg Yu Djum",
+    name: "Ningrat Eatery",
     category: "restaurant",
-    city: "Yogyakarta",
-    rating: 4.6,
-    reviews: 428,
+    address: "Jl. Purnama Agung 7 (Sekitar Parit Tokaya), Pontianak Selatan.",
+    rating: 4.7,
+    reviews: 331,
     priceRange: "$$",
-    image: "🍛",
-    description: "Gudeg basah dengan krecek dan areh yang creamy. Resep autentik Jogja sejak 1950.",
-    tags: ["Gudeg", "Javanese", "Traditional"],
-    openHours: "06:00 - 14:00"
-  },
-  {
-    id: 5,
-    name: "Es Teler 77 Original",
-    category: "dessert",
-    city: "Jakarta",
-    rating: 4.5,
-    reviews: 189,
-    priceRange: "$",
-    image: "🍧",
-    description: "Es teler original sebelum franchise. Alpukat, kelapa muda, dan nangka segar.",
-    tags: ["Dessert", "Indonesian", "Refreshing"],
+    imageUrl: `${culinaryImageBaseUrl}/places/01KKWGVWGR81WE9NHH6E2888WT.jpg`,
+    description: "Restoran keluarga bernuansa Jawa modern dengan hidangan Nusantara yang estetik dan tetap autentik.",
+    tags: ["Ramah Keluarga", "Nusantara", "Jawa Modern"],
     openHours: "10:00 - 22:00"
   },
   {
-    id: 6,
-    name: "Sate Klathak Pak Bari",
-    category: "street-food",
-    city: "Yogyakarta",
-    rating: 4.8,
-    reviews: 367,
-    priceRange: "$$",
-    image: "🍢",
-    description: "Sate kambing muda dengan tusuk jeruji sepeda. Dibakar dengan arang kelapa.",
-    tags: ["Sate", "Grilled", "Authentic"],
-    openHours: "16:00 - 22:00"
-  },
-  {
-    id: 7,
-    name: "Martabak San Francisco",
-    category: "dessert",
-    city: "Bandung",
-    rating: 4.7,
-    reviews: 445,
-    priceRange: "$$",
-    image: "🥞",
-    description: "Martabak manis dengan 50+ varian topping. Tekstur tebal dan empuk.",
-    tags: ["Martabak", "Sweet", "Popular"],
-    openHours: "15:00 - 23:00"
-  },
-  {
-    id: 8,
-    name: "Rawon Nguling",
-    category: "restaurant",
-    city: "Malang",
-    rating: 4.9,
-    reviews: 298,
-    priceRange: "$",
-    image: "🥣",
-    description: "Rawon dengan kuah hitam pekat dan daging empuk. Resep keluarga 4 generasi.",
-    tags: ["Rawon", "East Javanese", "Comfort Food"],
-    openHours: "07:00 - 15:00"
-  },
-  {
-    id: 9,
-    name: "Nasi Campur Bali Men Weti",
-    category: "restaurant",
-    city: "Bali",
-    rating: 4.8,
-    reviews: 521,
-    priceRange: "$$",
-    image: "🍱",
-    description: "Nasi campur Bali dengan lauk lengkap dan sambal matah yang segar.",
-    tags: ["Balinese", "Rice", "Complete Meal"],
-    openHours: "08:00 - 16:00"
-  },
-  {
-    id: 10,
-    name: "Soto Medan Pak Salam",
-    category: "street-food",
-    city: "Medan",
-    rating: 4.6,
-    reviews: 234,
-    priceRange: "$",
-    image: "🍲",
-    description: "Soto dengan santan kental dan perkedel kentang. Tambah emping untuk extra crunch!",
-    tags: ["Soto", "Sumatran", "Hearty"],
-    openHours: "06:00 - 14:00"
-  },
-  {
-    id: 11,
-    name: "Lumpia Gang Lombok",
-    category: "street-food",
-    city: "Semarang",
-    rating: 4.7,
-    reviews: 312,
-    priceRange: "$",
-    image: "🥟",
-    description: "Lumpia basah dan goreng dengan isian rebung dan udang segar.",
-    tags: ["Lumpia", "Semarang Special", "Snack"],
-    openHours: "09:00 - 21:00"
-  },
-  {
-    id: 12,
-    name: "Kopi Klotok",
+    id: 4,
+    name: "Tokokopi ODS",
     category: "cafe",
-    city: "Yogyakarta",
-    rating: 4.8,
-    reviews: 478,
+    address: "Jl. HM Suwignyo, Gg. Tegal Rejo IIIA, Pontianak Kota.",
+    rating: 4.6,
+    reviews: 244,
     priceRange: "$",
-    image: "☕",
-    description: "Kopi joss dengan arang membara di dalam gelas. Experience unik!",
-    tags: ["Coffee", "Unique", "Instagrammable"],
-    openHours: "07:00 - 23:00"
+    imageUrl: `${culinaryImageBaseUrl}/places/01KKWGYTB6ZDTBYQ83FV0JZMRP.jpg`,
+    description: "Kedai kopi favorit anak muda dengan konsep industrial raw, terkenal dengan matcha dan kopi susu creamy.",
+    tags: ["Industrial", "Harga Terjangkau", "Anak Muda"],
+    openHours: "15:30 - 17:30"
   },
+  {
+    id: 5,
+    name: "House of Tahron",
+    category: "restaurant",
+    address: "Jalan Alianyang, Gg. Kencana 1 No.4, Sungai Bangkong, Pontianak Kota",
+    rating: 4.7,
+    reviews: 216,
+    priceRange: "$$$",
+    imageUrl: `${culinaryImageBaseUrl}/places/01KKWHJRVAXZVEMQBB93JHGQAR.jpg`,
+    description: "Restoran rumahan hangat dengan ornamen vintage dan menu comfort food serta pasta.",
+    tags: ["Homey", "Vintage", "Comfort Food"],
+    openHours: "11:00 - 22:00"
+  }
 ];
-
-// API fetch function placeholder (untuk future implementation)
-// export async function fetchCulinaryPlaces() {
-//   const response = await fetch('https://api.snappie.id/places');
-//   const data = await response.json();
-//   return data;
-// }

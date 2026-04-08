@@ -60,26 +60,30 @@ const ListKuliner = () => {
                   {displayedPlaces.map((place) => (
                     <CarouselItem key={place.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
                       <div className="bg-card rounded-2xl shadow-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 overflow-hidden group">
-                        {/* Image placeholder */}
-                        <div className="h-48 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center text-6xl">
-                          {place.image}
+                        <div className="h-48 overflow-hidden bg-muted">
+                          <img
+                            src={place.imageUrl}
+                            alt={place.name}
+                            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                            loading="lazy"
+                          />
                         </div>
                         
                         {/* Content */}
                         <div className="p-6">
-                          <div className="flex items-start justify-between mb-3">
-                            <div>
+                          <div className="flex items-start justify-between mb-3 gap-3">
+                            <div className="min-w-0 flex-1">
                               <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
                                 {place.name}
                               </h3>
-                              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                                <MapPin className="w-4 h-4" />
-                                <span>{place.city}</span>
-                                <span>•</span>
-                                <span>{place.priceRange}</span>
+                              <div className="flex items-center gap-2 text-sm text-muted-foreground min-w-0">
+                                <MapPin className="w-4 h-4 shrink-0" />
+                                <span className="block flex-1 min-w-0 truncate" title={place.address}>{place.address}</span>
+                                <span className="shrink-0">•</span>
+                                <span className="shrink-0">{place.priceRange}</span>
                               </div>
                             </div>
-                            <div className="flex items-center gap-1 bg-secondary/10 px-2 py-1 rounded-lg">
+                            <div className="flex items-center gap-1 bg-secondary/10 px-2 py-1 rounded-lg shrink-0">
                               <Star className="w-4 h-4 fill-secondary text-secondary" />
                               <span className="text-sm font-semibold text-secondary">{place.rating}</span>
                             </div>
