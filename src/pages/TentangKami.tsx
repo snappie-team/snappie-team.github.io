@@ -3,6 +3,9 @@ import Footer from "@/components/Footer";
 import { Users, Target, Heart, Award, Sparkles, User, Instagram, Linkedin, Twitter, Github, FileText } from "lucide-react";
 import logo from "@/assets/dark-xxxhdpi.png";
 
+const marissaPhotoUrl = "https://ui-avatars.com/api/?name=Marissa+Ana&background=0ea5a8&color=ffffff&size=256";
+const tafifPhotoUrl = "https://tafifa.github.io/assets/img/about/tafif.jpg";
+
 const TentangKami = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -86,16 +89,21 @@ const TentangKami = () => {
             <div className="grid md:grid-cols-2 gap-8">
               {/* Team Member 1 */}
               <div className="bg-card rounded-2xl shadow-card p-8 flex flex-col items-center text-center hover:shadow-elevated transition-shadow">
-                <div className="w-40 h-40 md:w-48 md:h-48 bg-gradient-to-br from-primary to-primary/80 rounded-3xl flex items-center justify-center shadow-lg mb-6">
-                  <User className="w-20 h-20 md:w-24 md:h-24 text-white" />
+                <div className="w-40 h-40 md:w-48 md:h-48 rounded-3xl overflow-hidden shadow-lg mb-6">
+                  <img
+                    src={marissaPhotoUrl}
+                    alt="Foto Marissa Ana"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">Marissa Ana</h3>
                 <p className="text-sm text-muted-foreground mb-6">Hustler & Hipster</p>
                 <div className="flex gap-3">
-                  <a href="#" className="w-10 h-10 bg-primary/10 hover:bg-primary rounded-lg flex items-center justify-center transition-colors group">
+                  <a href="https://www.instagram.com/marissa.ana_/" className="w-10 h-10 bg-primary/10 hover:bg-primary rounded-lg flex items-center justify-center transition-colors group">
                     <Instagram className="w-5 h-5 text-primary group-hover:text-white" />
                   </a>
-                  <a href="#" className="w-10 h-10 bg-primary/10 hover:bg-primary rounded-lg flex items-center justify-center transition-colors group">
+                  <a href="https://www.linkedin.com/in/marissa-ana/" className="w-10 h-10 bg-primary/10 hover:bg-primary rounded-lg flex items-center justify-center transition-colors group">
                     <Linkedin className="w-5 h-5 text-primary group-hover:text-white" />
                   </a>
                 </div>
@@ -103,8 +111,13 @@ const TentangKami = () => {
 
               {/* Team Member 2 */}
               <div className="bg-card rounded-2xl shadow-card p-8 flex flex-col items-center text-center hover:shadow-elevated transition-shadow">
-                <div className="w-40 h-40 md:w-48 md:h-48 bg-gradient-to-br from-secondary to-secondary/80 rounded-3xl flex items-center justify-center shadow-lg mb-6">
-                  <User className="w-20 h-20 md:w-24 md:h-24 text-white" />
+                <div className="w-40 h-40 md:w-48 md:h-48 rounded-3xl overflow-hidden shadow-lg mb-6">
+                  <img
+                    src={tafifPhotoUrl}
+                    alt="Foto Tafif Assiddiqi"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">Tafif Assiddiqi</h3>
                 <p className="text-sm text-muted-foreground mb-6">Hacker</p>
