@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Download, Sparkles, MapPin, Star, Smartphone } from "lucide-react";
-import heroMockup from "@/assets/hero-mockup.jpg";
 import { useState } from "react";
 import DownloadModal from "./DownloadModal";
 import { useAppUpdate } from "@/hooks/useAppUpdate";
+import { mockupHeroImage } from "@/assets/index";
 
 const HeroSection = () => {
   const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
@@ -65,7 +65,7 @@ const HeroSection = () => {
                 {/* Phone mockup with shadow */}
                 <div className="relative">
                   <img 
-                    src={heroMockup} 
+                    src={mockupHeroImage} 
                     alt="Snappie app interface showing discovery map and restaurant cards"
                     className="w-full h-auto drop-shadow-2xl rounded-[2.5rem] border-4 border-white/20"
                   />

@@ -1,4 +1,5 @@
-import { Smartphone, MapPin, Camera, Star, Trophy, Gift, CheckCircle2 } from "lucide-react";
+import { Smartphone, Camera, Gift, CheckCircle2 } from "lucide-react";
+import { coinVoucherImage, loginPageImage, missionPageImage } from "@/assets/index";
 
 const HowItWorksSection = () => {
   return (
@@ -37,10 +38,13 @@ const HowItWorksSection = () => {
               </p>
             </div>
             <div className="flex-1">
-              <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-12 flex items-center justify-center min-h-[250px]">
-                <div className="w-24 h-24 bg-primary rounded-2xl flex items-center justify-center shadow-lg">
-                  <Smartphone className="w-12 h-12 text-white" />
-                </div>
+              <div className="rounded-3xl bg-primary/5 p-4 shadow-[0_24px_70px_rgba(15,23,42,0.16)]">
+                <img
+                  src={loginPageImage}
+                  alt="Tampilan login Snappie"
+                  className="h-full w-full max-h-[460px] rounded-2xl object-contain"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
@@ -60,10 +64,13 @@ const HowItWorksSection = () => {
               </p>
             </div>
             <div className="flex-1">
-              <div className="bg-gradient-to-br from-secondary/10 to-secondary/5 rounded-2xl p-12 flex items-center justify-center min-h-[250px]">
-                <div className="w-24 h-24 bg-secondary rounded-2xl flex items-center justify-center shadow-lg">
-                  <Camera className="w-12 h-12 text-white" />
-                </div>
+              <div className="rounded-3xl bg-secondary/5 p-4 shadow-[0_24px_70px_rgba(15,23,42,0.16)]">
+                <img
+                  src={missionPageImage}
+                  alt="Tampilan misi dan check-in Snappie"
+                  className="h-full w-full max-h-[460px] rounded-2xl object-contain"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
@@ -83,10 +90,13 @@ const HowItWorksSection = () => {
               </p>
             </div>
             <div className="flex-1">
-              <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-12 flex items-center justify-center min-h-[250px]">
-                <div className="w-24 h-24 bg-primary rounded-2xl flex items-center justify-center shadow-lg">
-                  <Gift className="w-12 h-12 text-white" />
-                </div>
+              <div className="rounded-3xl bg-primary/5 p-4 shadow-[0_24px_70px_rgba(15,23,42,0.16)]">
+                <img
+                  src={coinVoucherImage}
+                  alt="Tampilan reward kupon dan koin Snappie"
+                  className="h-full w-full max-h-[460px] rounded-2xl object-contain"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
