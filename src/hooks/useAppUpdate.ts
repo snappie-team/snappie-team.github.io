@@ -26,7 +26,7 @@ export const useAppUpdate = () => {
     try {
       setLoading(true);
       const response = await fetch(
-        "https://snappie.my.id/api/v2/app/update?version_code=1&device_platform=android",
+        "https://dev.snappie.my.id/api/v2/app/update?version_code=1&device_platform=android",
         {
           method: "GET",
           headers: {
