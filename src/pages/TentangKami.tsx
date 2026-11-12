@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Users, Target, Heart, Award, Sparkles, User, Instagram, Linkedin, Twitter, Github, FileText } from "lucide-react";
 import logo from "@/assets/dark-xxxhdpi.png";
 
-const marissaPhotoUrl = "https://ui-avatars.com/api/?name=Marissa+Ana&background=0ea5a8&color=ffffff&size=256";
+const marissaPhotoUrl = "https://tafifa.github.io/assets/img/about/marissa.jpg";
 const tafifPhotoUrl = "https://tafifa.github.io/assets/img/about/tafif.jpg";
 
 const TentangKami = () => {
